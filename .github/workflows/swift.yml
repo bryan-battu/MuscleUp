@@ -1,4 +1,4 @@
-# This workflow will build a Swift project
+# This workflow will build and test a Swift project with CocoaPods dependencies
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-swift
 
 name: Swift
@@ -11,12 +11,18 @@ on:
 
 jobs:
   build:
-
     runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v3
+
+    - name: Install CocoaPods dependencies
+      run: |
+        gem install cocoapods
+        pod install
+
     - name: Build
       run: swift build -v
+
     - name: Run tests
       run: swift test -v
