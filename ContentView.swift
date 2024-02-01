@@ -20,10 +20,10 @@ struct ContentView: View {
         }
         .overlay {
             if #available(iOS 17, *) {
-                CircleView()
+                circleView()
                     .animation(.smooth(duration: 0.45, extraBounce:  0), value: showSignUp)
             } else {
-                CircleView()
+                circleView()
                     .animation(.easeInOut(duration: 0.3), value: showSignUp)
             }
         }
@@ -31,7 +31,7 @@ struct ContentView: View {
     
     // On fait un cercle dont la position va changer en fonction de si on est sur l'écran de connexion ou d'inscription
     @ViewBuilder
-    func CircleView() -> some View {
+    func circleView() -> some View {
         Circle()
             .fill(.linearGradient(colors: [.appYellow, .orange, .red ], startPoint: .top, endPoint: .bottom))
             .frame(width: 200, height: 200)
