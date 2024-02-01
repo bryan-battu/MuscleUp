@@ -12,6 +12,14 @@ jobs:
       - name: GitHub Action for SwiftLint
         uses: norio-nomura/action-swiftlint@3.2.1
 
+      - name: Send Teams Message on Success
+        if: success()
+        uses: ad-m/ad-msteams-message@v1
+        with:
+          webhook-url: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          title: "SwiftLint Success on ${{ github.repository }}"
+          summary: "SwiftLint has successfully run on the repository ${{ github.repository }}."
+
   Build:
     runs-on: macos-latest
 
