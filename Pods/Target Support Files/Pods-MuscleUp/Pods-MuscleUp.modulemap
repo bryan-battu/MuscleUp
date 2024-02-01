@@ -1,0 +1,6 @@
+framework module Pods_MuscleUp {
+  umbrella header "Pods-MuscleUp-umbrella.h"
+
+  export *
+  module * { export * }
+}

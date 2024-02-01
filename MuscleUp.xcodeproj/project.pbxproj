@@ -1,0 +1,760 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		984721F02B541C5800A6573F /* MuscleUpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984721EF2B541C5800A6573F /* MuscleUpApp.swift */; };
+		984721F22B541C5800A6573F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984721F12B541C5800A6573F /* ContentView.swift */; };
+		984721F42B541C5900A6573F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 984721F32B541C5900A6573F /* Assets.xcassets */; };
+		984721F72B541C5900A6573F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 984721F62B541C5900A6573F /* Preview Assets.xcassets */; };
+		984722012B541C5900A6573F /* MuscleUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984722002B541C5900A6573F /* MuscleUpTests.swift */; };
+		9847220B2B541C5900A6573F /* MuscleUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9847220A2B541C5900A6573F /* MuscleUpUITests.swift */; };
+		9847220D2B541C5900A6573F /* MuscleUpUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9847220C2B541C5900A6573F /* MuscleUpUITestsLaunchTests.swift */; };
+		9847221B2B541E0E00A6573F /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9847221A2B541E0E00A6573F /* Login.swift */; };
+		9847221F2B541FA900A6573F /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9847221E2B541FA900A6573F /* View+Extensions.swift */; };
+		984722212B54211000A6573F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984722202B54211000A6573F /* CustomTextField.swift */; };
+		984722232B54288200A6573F /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984722222B54288200A6573F /* GradientButton.swift */; };
+		984722252B542E0D00A6573F /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984722242B542E0D00A6573F /* SignUp.swift */; };
+		984722272B5431C800A6573F /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984722262B5431C800A6573F /* ForgotPassword.swift */; };
+		98F073EE2B5B1782006D4172 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F073ED2B5B1782006D4172 /* HeaderView.swift */; };
+		98F073F02B5B1AF6006D4172 /* PasswordResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F073EF2B5B1AF6006D4172 /* PasswordResetView.swift */; };
+		C964C170D49096BDFC3B2C7A /* Pods_MuscleUp_MuscleUpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECFF11EBDC6C8EFB003CD35A /* Pods_MuscleUp_MuscleUpUITests.framework */; };
+		F2A1D05448BD2884A9136FF5 /* Pods_MuscleUpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B3290C64ECE7F9EEB44BC93 /* Pods_MuscleUpTests.framework */; };
+		F4BD20132DBF27342A42CE50 /* Pods_MuscleUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F55BF012AAE892C7ACFB48 /* Pods_MuscleUp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		984721FD2B541C5900A6573F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 984721E42B541C5800A6573F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 984721EB2B541C5800A6573F;
+			remoteInfo = MuscleUp;
+		};
+		984722072B541C5900A6573F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 984721E42B541C5800A6573F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 984721EB2B541C5800A6573F;
+			remoteInfo = MuscleUp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3B1895B929AAB2EFA77C5C05 /* Pods-MuscleUpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUpTests.debug.xcconfig"; path = "Target Support Files/Pods-MuscleUpTests/Pods-MuscleUpTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3B3290C64ECE7F9EEB44BC93 /* Pods_MuscleUpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuscleUpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E5D54156A8355E1038A8B47 /* Pods-MuscleUpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUpTests.release.xcconfig"; path = "Target Support Files/Pods-MuscleUpTests/Pods-MuscleUpTests.release.xcconfig"; sourceTree = "<group>"; };
+		3FB23115833B8F4CE35C09D6 /* Pods-MuscleUp-MuscleUpUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUp-MuscleUpUITests.debug.xcconfig"; path = "Target Support Files/Pods-MuscleUp-MuscleUpUITests/Pods-MuscleUp-MuscleUpUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		59A2B54E0F103D82D5D20AA4 /* Pods-MuscleUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUp.debug.xcconfig"; path = "Target Support Files/Pods-MuscleUp/Pods-MuscleUp.debug.xcconfig"; sourceTree = "<group>"; };
+		640503FB3555FA9B9D693C7A /* Pods-MuscleUp-MuscleUpUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUp-MuscleUpUITests.release.xcconfig"; path = "Target Support Files/Pods-MuscleUp-MuscleUpUITests/Pods-MuscleUp-MuscleUpUITests.release.xcconfig"; sourceTree = "<group>"; };
+		68F55BF012AAE892C7ACFB48 /* Pods_MuscleUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuscleUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		984721EC2B541C5800A6573F /* MuscleUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuscleUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		984721EF2B541C5800A6573F /* MuscleUpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleUpApp.swift; sourceTree = "<group>"; };
+		984721F12B541C5800A6573F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		984721F32B541C5900A6573F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		984721F62B541C5900A6573F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		984721FC2B541C5900A6573F /* MuscleUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuscleUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		984722002B541C5900A6573F /* MuscleUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleUpTests.swift; sourceTree = "<group>"; };
+		984722062B541C5900A6573F /* MuscleUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuscleUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9847220A2B541C5900A6573F /* MuscleUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleUpUITests.swift; sourceTree = "<group>"; };
+		9847220C2B541C5900A6573F /* MuscleUpUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuscleUpUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9847221A2B541E0E00A6573F /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		9847221E2B541FA900A6573F /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		984722202B54211000A6573F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		984722222B54288200A6573F /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		984722242B542E0D00A6573F /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		984722262B5431C800A6573F /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
+		98652DB9A9D9C56F5BEB29DB /* Pods-MuscleUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUp.release.xcconfig"; path = "Target Support Files/Pods-MuscleUp/Pods-MuscleUp.release.xcconfig"; sourceTree = "<group>"; };
+		98F073ED2B5B1782006D4172 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		98F073EF2B5B1AF6006D4172 /* PasswordResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetView.swift; sourceTree = "<group>"; };
+		ECFF11EBDC6C8EFB003CD35A /* Pods_MuscleUp_MuscleUpUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuscleUp_MuscleUpUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		984721E92B541C5800A6573F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4BD20132DBF27342A42CE50 /* Pods_MuscleUp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		984721F92B541C5900A6573F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2A1D05448BD2884A9136FF5 /* Pods_MuscleUpTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		984722032B541C5900A6573F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C964C170D49096BDFC3B2C7A /* Pods_MuscleUp_MuscleUpUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8F3DA8EFC422BA402D72B31C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				59A2B54E0F103D82D5D20AA4 /* Pods-MuscleUp.debug.xcconfig */,
+				98652DB9A9D9C56F5BEB29DB /* Pods-MuscleUp.release.xcconfig */,
+				3FB23115833B8F4CE35C09D6 /* Pods-MuscleUp-MuscleUpUITests.debug.xcconfig */,
+				640503FB3555FA9B9D693C7A /* Pods-MuscleUp-MuscleUpUITests.release.xcconfig */,
+				3B1895B929AAB2EFA77C5C05 /* Pods-MuscleUpTests.debug.xcconfig */,
+				3E5D54156A8355E1038A8B47 /* Pods-MuscleUpTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		984721E32B541C5800A6573F = {
+			isa = PBXGroup;
+			children = (
+				984721EE2B541C5800A6573F /* MuscleUp */,
+				984721FF2B541C5900A6573F /* MuscleUpTests */,
+				984722092B541C5900A6573F /* MuscleUpUITests */,
+				984721ED2B541C5800A6573F /* Products */,
+				8F3DA8EFC422BA402D72B31C /* Pods */,
+				EB3732F124628F0077DB87A9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		984721ED2B541C5800A6573F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				984721EC2B541C5800A6573F /* MuscleUp.app */,
+				984721FC2B541C5900A6573F /* MuscleUpTests.xctest */,
+				984722062B541C5900A6573F /* MuscleUpUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		984721EE2B541C5800A6573F /* MuscleUp */ = {
+			isa = PBXGroup;
+			children = (
+				9847221C2B541F9500A6573F /* Helpers */,
+				984722192B541DDC00A6573F /* View */,
+				984721EF2B541C5800A6573F /* MuscleUpApp.swift */,
+				984721F12B541C5800A6573F /* ContentView.swift */,
+				984721F32B541C5900A6573F /* Assets.xcassets */,
+				984721F52B541C5900A6573F /* Preview Content */,
+			);
+			path = MuscleUp;
+			sourceTree = "<group>";
+		};
+		984721F52B541C5900A6573F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				984721F62B541C5900A6573F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		984721FF2B541C5900A6573F /* MuscleUpTests */ = {
+			isa = PBXGroup;
+			children = (
+				984722002B541C5900A6573F /* MuscleUpTests.swift */,
+			);
+			path = MuscleUpTests;
+			sourceTree = "<group>";
+		};
+		984722092B541C5900A6573F /* MuscleUpUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9847220A2B541C5900A6573F /* MuscleUpUITests.swift */,
+				9847220C2B541C5900A6573F /* MuscleUpUITestsLaunchTests.swift */,
+			);
+			path = MuscleUpUITests;
+			sourceTree = "<group>";
+		};
+		984722192B541DDC00A6573F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9847221A2B541E0E00A6573F /* Login.swift */,
+				984722202B54211000A6573F /* CustomTextField.swift */,
+				984722222B54288200A6573F /* GradientButton.swift */,
+				984722242B542E0D00A6573F /* SignUp.swift */,
+				984722262B5431C800A6573F /* ForgotPassword.swift */,
+				98F073EF2B5B1AF6006D4172 /* PasswordResetView.swift */,
+				98F073ED2B5B1782006D4172 /* HeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9847221C2B541F9500A6573F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9847221E2B541FA900A6573F /* View+Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EB3732F124628F0077DB87A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68F55BF012AAE892C7ACFB48 /* Pods_MuscleUp.framework */,
+				ECFF11EBDC6C8EFB003CD35A /* Pods_MuscleUp_MuscleUpUITests.framework */,
+				3B3290C64ECE7F9EEB44BC93 /* Pods_MuscleUpTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		984721EB2B541C5800A6573F /* MuscleUp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 984722102B541C5900A6573F /* Build configuration list for PBXNativeTarget "MuscleUp" */;
+			buildPhases = (
+				1C8183A7EE8C0F61C73048E1 /* [CP] Check Pods Manifest.lock */,
+				984721E82B541C5800A6573F /* Sources */,
+				984721E92B541C5800A6573F /* Frameworks */,
+				984721EA2B541C5800A6573F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MuscleUp;
+			productName = MuscleUp;
+			productReference = 984721EC2B541C5800A6573F /* MuscleUp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		984721FB2B541C5900A6573F /* MuscleUpTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 984722132B541C5900A6573F /* Build configuration list for PBXNativeTarget "MuscleUpTests" */;
+			buildPhases = (
+				992E6C19F486BF67262BF696 /* [CP] Check Pods Manifest.lock */,
+				984721F82B541C5900A6573F /* Sources */,
+				984721F92B541C5900A6573F /* Frameworks */,
+				984721FA2B541C5900A6573F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				984721FE2B541C5900A6573F /* PBXTargetDependency */,
+			);
+			name = MuscleUpTests;
+			productName = MuscleUpTests;
+			productReference = 984721FC2B541C5900A6573F /* MuscleUpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		984722052B541C5900A6573F /* MuscleUpUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 984722162B541C5900A6573F /* Build configuration list for PBXNativeTarget "MuscleUpUITests" */;
+			buildPhases = (
+				23E51D2D462EACEF235E0DA4 /* [CP] Check Pods Manifest.lock */,
+				984722022B541C5900A6573F /* Sources */,
+				984722032B541C5900A6573F /* Frameworks */,
+				984722042B541C5900A6573F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				984722082B541C5900A6573F /* PBXTargetDependency */,
+			);
+			name = MuscleUpUITests;
+			productName = MuscleUpUITests;
+			productReference = 984722062B541C5900A6573F /* MuscleUpUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		984721E42B541C5800A6573F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					984721EB2B541C5800A6573F = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					984721FB2B541C5900A6573F = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 984721EB2B541C5800A6573F;
+					};
+					984722052B541C5900A6573F = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 984721EB2B541C5800A6573F;
+					};
+				};
+			};
+			buildConfigurationList = 984721E72B541C5800A6573F /* Build configuration list for PBXProject "MuscleUp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 984721E32B541C5800A6573F;
+			productRefGroup = 984721ED2B541C5800A6573F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				984721EB2B541C5800A6573F /* MuscleUp */,
+				984721FB2B541C5900A6573F /* MuscleUpTests */,
+				984722052B541C5900A6573F /* MuscleUpUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		984721EA2B541C5800A6573F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				984721F72B541C5900A6573F /* Preview Assets.xcassets in Resources */,
+				984721F42B541C5900A6573F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		984721FA2B541C5900A6573F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		984722042B541C5900A6573F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C8183A7EE8C0F61C73048E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MuscleUp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		23E51D2D462EACEF235E0DA4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MuscleUp-MuscleUpUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		992E6C19F486BF67262BF696 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MuscleUpTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		984721E82B541C5800A6573F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				984722252B542E0D00A6573F /* SignUp.swift in Sources */,
+				98F073F02B5B1AF6006D4172 /* PasswordResetView.swift in Sources */,
+				98F073EE2B5B1782006D4172 /* HeaderView.swift in Sources */,
+				9847221B2B541E0E00A6573F /* Login.swift in Sources */,
+				984722232B54288200A6573F /* GradientButton.swift in Sources */,
+				984722272B5431C800A6573F /* ForgotPassword.swift in Sources */,
+				984721F22B541C5800A6573F /* ContentView.swift in Sources */,
+				9847221F2B541FA900A6573F /* View+Extensions.swift in Sources */,
+				984721F02B541C5800A6573F /* MuscleUpApp.swift in Sources */,
+				984722212B54211000A6573F /* CustomTextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		984721F82B541C5900A6573F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				984722012B541C5900A6573F /* MuscleUpTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		984722022B541C5900A6573F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9847220D2B541C5900A6573F /* MuscleUpUITestsLaunchTests.swift in Sources */,
+				9847220B2B541C5900A6573F /* MuscleUpUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		984721FE2B541C5900A6573F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 984721EB2B541C5800A6573F /* MuscleUp */;
+			targetProxy = 984721FD2B541C5900A6573F /* PBXContainerItemProxy */;
+		};
+		984722082B541C5900A6573F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 984721EB2B541C5800A6573F /* MuscleUp */;
+			targetProxy = 984722072B541C5900A6573F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9847220E2B541C5900A6573F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9847220F2B541C5900A6573F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		984722112B541C5900A6573F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59A2B54E0F103D82D5D20AA4 /* Pods-MuscleUp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MuscleUp/Preview Content\"";
+				DEVELOPMENT_TEAM = MKU9V22KT6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ynov.MuscleUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		984722122B541C5900A6573F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98652DB9A9D9C56F5BEB29DB /* Pods-MuscleUp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MuscleUp/Preview Content\"";
+				DEVELOPMENT_TEAM = MKU9V22KT6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ynov.MuscleUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		984722142B541C5900A6573F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B1895B929AAB2EFA77C5C05 /* Pods-MuscleUpTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MKU9V22KT6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ynov.MuscleUpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuscleUp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MuscleUp";
+			};
+			name = Debug;
+		};
+		984722152B541C5900A6573F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E5D54156A8355E1038A8B47 /* Pods-MuscleUpTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MKU9V22KT6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ynov.MuscleUpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MuscleUp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MuscleUp";
+			};
+			name = Release;
+		};
+		984722172B541C5900A6573F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FB23115833B8F4CE35C09D6 /* Pods-MuscleUp-MuscleUpUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MKU9V22KT6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ynov.MuscleUpUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MuscleUp;
+			};
+			name = Debug;
+		};
+		984722182B541C5900A6573F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 640503FB3555FA9B9D693C7A /* Pods-MuscleUp-MuscleUpUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MKU9V22KT6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ynov.MuscleUpUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MuscleUp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		984721E72B541C5800A6573F /* Build configuration list for PBXProject "MuscleUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9847220E2B541C5900A6573F /* Debug */,
+				9847220F2B541C5900A6573F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		984722102B541C5900A6573F /* Build configuration list for PBXNativeTarget "MuscleUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				984722112B541C5900A6573F /* Debug */,
+				984722122B541C5900A6573F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		984722132B541C5900A6573F /* Build configuration list for PBXNativeTarget "MuscleUpTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				984722142B541C5900A6573F /* Debug */,
+				984722152B541C5900A6573F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		984722162B541C5900A6573F /* Build configuration list for PBXNativeTarget "MuscleUpUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				984722172B541C5900A6573F /* Debug */,
+				984722182B541C5900A6573F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 984721E42B541C5800A6573F /* Project object */;
+}
