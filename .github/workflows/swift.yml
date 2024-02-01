@@ -22,11 +22,6 @@ jobs:
         pod install --repo-update
       shell: bash
 
-    - name: Xcode Setup
-      uses: maxim-lobanov/setup-xcode@v1
-      with:
-        xcode-version: '14.2.0'  # Utiliser la version 14.2 d'Xcode
-
     - name: Clean
       run: |
         xcodebuild clean -workspace MuscleUp.xcworkspace -scheme MuscleUp
