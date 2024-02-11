@@ -15,6 +15,7 @@
 			dependencies = (
 			);
 			name = SwiftLint;
+			productName = SwiftLint;
 		};
 /* End PBXAggregateTarget section */
 
@@ -75,17 +76,17 @@
 		9107C8C75DA51886E99991BB5B45F3E7 /* Pods-MuscleUpTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MuscleUpTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		961D5CE5B5CD1DB846811B27A0055BF6 /* Pods-MuscleUpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MuscleUpTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9BFD0BBE9C1CB31CF655A628590DE8D9 /* Pods-MuscleUp-MuscleUpUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MuscleUp-MuscleUpUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		ACB9B72D0B61BB05C635DF394ED6A0E2 /* Pods-MuscleUp-MuscleUpUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MuscleUp-MuscleUpUITests.modulemap"; sourceTree = "<group>"; };
 		B4D93061A126899F065BA9BCE31765E8 /* Pods-MuscleUp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MuscleUp.modulemap"; sourceTree = "<group>"; };
 		B8CEEE19829A636097C72890DA06773B /* Pods-MuscleUpTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MuscleUpTests-umbrella.h"; sourceTree = "<group>"; };
 		BFB8B8C50EEBCF46BAE5954D77AC7951 /* Pods-MuscleUp-MuscleUpUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MuscleUp-MuscleUpUITests-Info.plist"; sourceTree = "<group>"; };
 		D6F14D9D79DB019BB516F843FD7D047C /* Pods-MuscleUp-MuscleUpUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MuscleUp-MuscleUpUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D90A06131E6B90F23D0FF5041CC6E581 /* Pods-MuscleUp-MuscleUpUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MuscleUp-MuscleUpUITests-umbrella.h"; sourceTree = "<group>"; };
-		DCA00E1C86EABE655B187340D672B93B /* Pods-MuscleUp-MuscleUpUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MuscleUp-MuscleUpUITests"; path = Pods_MuscleUp_MuscleUpUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCA00E1C86EABE655B187340D672B93B /* Pods_MuscleUp_MuscleUpUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuscleUp_MuscleUpUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDFF0981457E5963583AA7971A3FCFEE /* Pods-MuscleUp-MuscleUpUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MuscleUp-MuscleUpUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		EFC4DA524953BA9BB86E38DDDF34DA0D /* Pods-MuscleUp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MuscleUp-Info.plist"; sourceTree = "<group>"; };
-		F294817E6B330411B0D1090C4DE0AA11 /* Pods-MuscleUp */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MuscleUp"; path = Pods_MuscleUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F294817E6B330411B0D1090C4DE0AA11 /* Pods_MuscleUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuscleUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,8 +186,8 @@
 		6B393BCD482ADEABC6FE222F841E1238 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F294817E6B330411B0D1090C4DE0AA11 /* Pods-MuscleUp */,
-				DCA00E1C86EABE655B187340D672B93B /* Pods-MuscleUp-MuscleUpUITests */,
+				F294817E6B330411B0D1090C4DE0AA11 /* Pods_MuscleUp.framework */,
+				DCA00E1C86EABE655B187340D672B93B /* Pods_MuscleUp_MuscleUpUITests.framework */,
 				7EAE3053B2FBB3654DE2AA78FF7479AE /* Pods-MuscleUpTests */,
 			);
 			name = Products;
@@ -234,7 +235,6 @@
 			children = (
 				7FDA596DBE0337ACDFE55A210D54EF26 /* Support Files */,
 			);
-			name = SwiftLint;
 			path = SwiftLint;
 			sourceTree = "<group>";
 		};
@@ -303,7 +303,7 @@
 			);
 			name = "Pods-MuscleUp-MuscleUpUITests";
 			productName = Pods_MuscleUp_MuscleUpUITests;
-			productReference = DCA00E1C86EABE655B187340D672B93B /* Pods-MuscleUp-MuscleUpUITests */;
+			productReference = DCA00E1C86EABE655B187340D672B93B /* Pods_MuscleUp_MuscleUpUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		839FD241BAF907C03D1A3B5345E65F63 /* Pods-MuscleUp */ = {
@@ -322,7 +322,7 @@
 			);
 			name = "Pods-MuscleUp";
 			productName = Pods_MuscleUp;
-			productReference = F294817E6B330411B0D1090C4DE0AA11 /* Pods-MuscleUp */;
+			productReference = F294817E6B330411B0D1090C4DE0AA11 /* Pods_MuscleUp.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
