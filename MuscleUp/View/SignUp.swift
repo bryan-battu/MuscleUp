@@ -26,7 +26,7 @@ struct SignUp: View {
                     .foregroundStyle(.gray)
             }
             .padding(.top, 10)
-        
+            
             HeaderView(title: "Inscription", subtitle: "Inscrivez-vous pour continuer")
             
             VStack(spacing: 25) {
@@ -71,7 +71,8 @@ struct SignUp: View {
 }
 
 
-
+#if DEBUG
 #Preview {
     ContentView()
 }
+#endif
