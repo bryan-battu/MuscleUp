@@ -1,8 +1,12 @@
-name: Swift
+name: Build and Test
 
 on:
-  push:
-    branches: ["main"]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Numéro de version de l''application'
+        required: true
+        default: '1.0.0' # Vous pouvez définir une valeur par défaut ici
 
 jobs:
   SwiftLint:
@@ -14,9 +18,11 @@ jobs:
         
   Build:
     runs-on: macos-13
+    needs: SwiftLint
 
     steps:
     - uses: actions/checkout@v4
+
     - name: Install Dependencies
       run: |
         pod install --repo-update
@@ -26,6 +32,11 @@ jobs:
       run: |
         xcodebuild clean -workspace MuscleUp.xcworkspace -scheme MuscleUp
 
+    - name: Set App Version
+      run: |
+        /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString ${{ github.event.inputs.version }}" Info.plist
+      working-directory: MuscleUp # Remplacez par le répertoire contenant votre fichier Info.plist
+
     - name: Build
       run: |
         xcodebuild build -workspace MuscleUp.xcworkspace -scheme MuscleUp -sdk iphoneos CODE_SIGNING_ALLOWED=No
@@ -33,3 +44,5 @@ jobs:
     - name: Run tests
       run: |
         xcodebuild test -workspace MuscleUp.xcworkspace -scheme MuscleUp -sdk iphoneos -destination "platform=iOS Simulator,name=iPhone 15 Pro Max" CODE_SIGNING_ALLOWED=No
+
+    
