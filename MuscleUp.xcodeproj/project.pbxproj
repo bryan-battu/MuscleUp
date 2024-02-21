@@ -20,7 +20,6 @@
 		984722232B54288200A6573F /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984722222B54288200A6573F /* GradientButton.swift */; };
 		984722252B542E0D00A6573F /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984722242B542E0D00A6573F /* SignUp.swift */; };
 		984722272B5431C800A6573F /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984722262B5431C800A6573F /* ForgotPassword.swift */; };
-		9862F0E22B792D4000663F12 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9862F0E12B792D4000663F12 /* .gitignore */; };
 		98F073EE2B5B1782006D4172 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F073ED2B5B1782006D4172 /* HeaderView.swift */; };
 		98F073F02B5B1AF6006D4172 /* PasswordResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F073EF2B5B1AF6006D4172 /* PasswordResetView.swift */; };
 		C964C170D49096BDFC3B2C7A /* Pods_MuscleUp_MuscleUpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECFF11EBDC6C8EFB003CD35A /* Pods_MuscleUp_MuscleUpUITests.framework */; };
@@ -69,7 +68,6 @@
 		984722222B54288200A6573F /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		984722242B542E0D00A6573F /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		984722262B5431C800A6573F /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
-		9862F0E12B792D4000663F12 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		98652DB9A9D9C56F5BEB29DB /* Pods-MuscleUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUp.release.xcconfig"; path = "Target Support Files/Pods-MuscleUp/Pods-MuscleUp.release.xcconfig"; sourceTree = "<group>"; };
 		98F073ED2B5B1782006D4172 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		98F073EF2B5B1AF6006D4172 /* PasswordResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetView.swift; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 				984721F12B541C5800A6573F /* ContentView.swift */,
 				984721F32B541C5900A6573F /* Assets.xcassets */,
 				984721F52B541C5900A6573F /* Preview Content */,
-				9862F0E12B792D4000663F12 /* .gitignore */,
 			);
 			path = MuscleUp;
 			sourceTree = "<group>";
@@ -318,7 +315,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				984721F72B541C5900A6573F /* Preview Assets.xcassets in Resources */,
-				9862F0E22B792D4000663F12 /* .gitignore in Resources */,
 				984721F42B541C5900A6573F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
