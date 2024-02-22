@@ -25,12 +25,12 @@ jobs:
           swift-version: "5.3.3"
       - name: Build
         run: |
-          xcodebuild -scheme MuscleUp -destination 'platform=macOS' build
+          xcodebuild build -workspace MuscleUp.xcworkspace -scheme MuscleUp -sdk iphoneos CODE_SIGNING_ALLOWED=No
           # Copier les artefacts dans un répertoire temporaire
           mkdir -p temp-artifact
           cp -R DerivedData/MuscleUp-cnmuiiqdkeivivcdaacuhkxtysko/Build/Products/* temp-artifact/
       - name: Run tests
-        run: xcodebuild -scheme MuscleUp -destination 'platform=macOS' test
+        run: xcodebuild -scheme MuscleUp -destination 'platform=iOS' test
         
       - uses: actions/upload-artifact@v4
         with:
