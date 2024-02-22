@@ -16,19 +16,15 @@ jobs:
       - name: GitHub Action for SwiftLint
         uses: norio-nomura/action-swiftlint@3.2.1
 
-  VersionUp:
-    runs-on: macos-latest
-    outputs:
-      new_version: ${{ steps.set_version.outputs.new_version }}
-      new_build_number: ${{ steps.set_version.outputs.new_build_number }}
+  Bump:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Set Version and Build Number
-        id: set_version
-        uses: yanamura/ios-bump-version@v1
+      - uses: actions/checkout@v2
+      - uses: ults-io/mobile-version-bump-action@v2
         with:
-          version: ${{ github.event.inputs.version }}
-          build-number: ${{github.run_number}}
+          build-number: 1 # optional param for iOS build number - if not provided, will be incremented by 1
+          ios-project-path: ./ # required if you want to trigger iOS version bump
+          app-version: 1.0.0 # optional param for Android & iOS version
           
   Build:
     runs-on: macos-13
