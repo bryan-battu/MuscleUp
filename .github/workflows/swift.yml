@@ -28,7 +28,7 @@ jobs:
           xcodebuild -scheme MuscleUp -destination 'platform=macOS' build
           # Copier les artefacts dans un répertoire temporaire
           mkdir -p temp-artifact
-          cp -R DerivedData/MuscleUp-<hash>/Build/Products/* temp-artifact/
+          cp -R DerivedData/MuscleUp-cnmuiiqdkeivivcdaacuhkxtysko/Build/Products/* temp-artifact/
       - name: Run tests
         run: xcodebuild -scheme MuscleUp -destination 'platform=macOS' test
         
