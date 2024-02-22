@@ -19,10 +19,11 @@ jobs:
   VersionUp:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: yanamura/ios-bump-version@v1
         with:
           version: ${{ github.event.inputs.version }}
+          build-number: ${{github.run_number}}
 
   Build:
     runs-on: macos-13
