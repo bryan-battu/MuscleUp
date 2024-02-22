@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Numéro de version de l''application'
+        description: "Numéro de version de l'application"
         required: true
-        default: '1.0.0' # Vous pouvez définir une valeur par défaut ici
+        default: "1.0.0" # Vous pouvez définir une valeur par défaut ici
 
 jobs:
   SwiftLint:
@@ -15,25 +15,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: GitHub Action for SwiftLint
         uses: norio-nomura/action-swiftlint@3.2.1
-
-  Bump:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: ults-io/mobile-version-bump-action@v2
-        with:
-          build-number: 1 # optional param for iOS build number - if not provided, will be incremented by 1
-          ios-project-path: ./ # required if you want to trigger iOS version bump
-          app-version: 1.0.0 # optional param for Android & iOS version
-          
+        
   Build:
     runs-on: macos-13
     steps:
-    - uses: actions/checkout@v4
-    - uses: swift-actions/setup-swift@65540b95f51493d65f5e59e97dcef9629ddf11bf
-      with:
-        swift-version: "5.3.3"
-    - name: Build
-      run: swift build
-    - name: Run tests
-      run: swift test
+      - uses: actions/checkout@v4
+      - uses: swift-actions/setup-swift@65540b95f51493d65f5e59e97dcef9629ddf11bf
+        with:
+          swift-version: "5.3.3"
+      - name: Build
+        run: swift build
+      - name: Run tests
+        run: swift test
