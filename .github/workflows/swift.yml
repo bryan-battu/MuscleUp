@@ -26,13 +26,10 @@ jobs:
       - name: Build
         run: |
           xcodebuild build -workspace MuscleUp.xcworkspace -scheme MuscleUp -sdk iphoneos CODE_SIGNING_ALLOWED=No
-          # Copier les artefacts dans un répertoire temporaire
-          mkdir -p temp-artifact
-          cp -R DerivedData/MuscleUp-<hash>/Build/Products/* temp-artifact/
       - name: Run tests
         run: xcodebuild -scheme MuscleUp -destination 'platform=iOS' test
         
       - uses: actions/upload-artifact@v4
         with:
           name: my-artifact
-          path: temp-artifact  # Utiliser le répertoire temporaire créé précédemment
+          path: DerivedData/**/*.app
