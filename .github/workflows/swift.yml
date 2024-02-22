@@ -18,16 +18,41 @@ jobs:
 
   VersionUp:
     runs-on: macos-latest
+    outputs:
+      new_version: ${{ steps.set_version.outputs.new_version }}
+      new_build_number: ${{ steps.set_version.outputs.new_build_number }}
     steps:
       - uses: actions/checkout@v4
-      - uses: yanamura/ios-bump-version@v1
+      - name: Set Version and Build Number
+        id: set_version
+        uses: yanamura/ios-bump-version@v1
         with:
           version: ${{ github.event.inputs.version }}
           build-number: ${{github.run_number}}
 
-  Build:
-    runs-on: macos-13
+  Commit_Push_and_Tag:
     needs: [SwiftLint, VersionUp]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add .
+          git commit -m "Bump version to ${{needs.VersionUp.outputs.new_version}} and build number to ${{needs.VersionUp.outputs.new_build_number}}"
+          git push
+
+      - name: Tag the release
+        run: |
+          git tag -a v${{needs.VersionUp.outputs.new_version}} -m "Release version ${{needs.VersionUp.outputs.new_version}}"
+          git push --tags
+
+  Build:
+    needs: Commit_Push_and_Tag
+    runs-on: macos-13
 
     steps:
       - uses: actions/checkout@v4
