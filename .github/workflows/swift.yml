@@ -23,11 +23,6 @@ jobs:
       - uses: yanamura/ios-bump-version@v1
         with:
           version: ${{ github.event.inputs.version }}
-      - name: Update
-        run: |
-          git add .
-          git commit -m "Bump version"
-          git push origin HEAD
 
   Build:
     runs-on: macos-13
