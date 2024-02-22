@@ -6,7 +6,7 @@ on:
       version:
         description: "Numéro de version de l'application"
         required: true
-        default: "1.0.0" # Vous pouvez définir une valeur par défaut ici
+        default: "1.0.0"
 
 jobs:
   SwiftLint:
@@ -24,6 +24,15 @@ jobs:
         with:
           swift-version: "5.3.3"
       - name: Build
-        run: swift build
+        run: |
+          xcodebuild -scheme MuscleUp -destination 'platform=macOS' build
+          # Copier les artefacts dans un répertoire temporaire
+          mkdir -p temp-artifact
+          cp -R DerivedData/MuscleUp-<hash>/Build/Products/* temp-artifact/
       - name: Run tests
-        run: swift test
+        run: xcodebuild -scheme MuscleUp -destination 'platform=macOS' test
+        
+      - uses: actions/upload-artifact@v4
+        with:
+          name: my-artifact
+          path: temp-artifact  # Utiliser le répertoire temporaire créé précédemment
