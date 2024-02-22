@@ -29,47 +29,15 @@ jobs:
         with:
           version: ${{ github.event.inputs.version }}
           build-number: ${{github.run_number}}
-
-  Commit_Push_and_Tag:
-    needs: [SwiftLint, VersionUp]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Commit and Push Changes
-        run: |
-          git config --global user.email "bryan.battu@gmail.com"
-          git config --global user.name "GitHub Actions"
-          git add .
-          git commit -m "Bump version to ${{needs.VersionUp.outputs.new_version}} and build number to ${{needs.VersionUp.outputs.new_build_number}}"
-          git push
-
-      - name: Tag the release
-        run: |
-          git tag -a v${{needs.VersionUp.outputs.new_version}} -m "Release version ${{needs.VersionUp.outputs.new_version}}"
-          git push --tags
-
+          
   Build:
-    needs: Commit_Push_and_Tag
     runs-on: macos-13
-
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Install Dependencies
-        run: |
-          pod install --repo-update
-        shell: bash
-
-      - name: Clean
-        run: |
-          xcodebuild clean -workspace MuscleUp.xcworkspace -scheme MuscleUp
-
-      - name: Build
-        run: |
-          xcodebuild build -workspace MuscleUp.xcworkspace -scheme MuscleUp -sdk iphoneos CODE_SIGNING_ALLOWED=No
-
-      - name: Run tests
-        run: |
-          xcodebuild test -workspace MuscleUp.xcworkspace -scheme MuscleUp -sdk iphoneos -destination "platform=iOS Simulator,name=iPhone 15 Pro Max" CODE_SIGNING_ALLOWED=No
+    - uses: actions/checkout@v4
+    - uses: swift-actions/setup-swift@65540b95f51493d65f5e59e97dcef9629ddf11bf
+      with:
+        swift-version: "5.3.3"
+    - name: Build
+      run: swift build
+    - name: Run tests
+      run: swift test
