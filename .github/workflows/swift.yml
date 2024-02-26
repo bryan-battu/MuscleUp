@@ -28,7 +28,7 @@ jobs:
         run: |
           sed -i '' 's/MARKETING_VERSION = .*;/MARKETING_VERSION = "${{ github.event.inputs.version }}";/' MuscleUp.xcodeproj/project.pbxproj
           sed -i '' 's/CURRENT_PROJECT_VERSION = .*;/CURRENT_PROJECT_VERSION = "${{ github.run_number }}";/' MuscleUp.xcodeproj/project.pbxproj
-      - name: Commit, Tag and Push
+      - name: Commit and Push
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
