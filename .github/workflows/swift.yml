@@ -33,4 +33,5 @@ jobs:
           path: DerivedData/**/*.app
           
       - name: Run tests
-        run: xcodebuild -scheme MuscleUp -destination 'platform=iOS' test
+        run: |
+          xcodebuild -scheme MuscleUp -destination 'platform=iOS' test
