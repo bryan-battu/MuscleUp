@@ -21,9 +21,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Setup Swift
-        uses: swift-actions/setup-swift@65540b95f51493d65f5e59e97dcef9629ddf11bf
+        uses: swift-actions/setup-swift@v1
         with:
-          swift-version: "5.3.3"
+          swift-version: "5.1.0"
       - name: Update Version
         run: |
           sed -i '' 's/MARKETING_VERSION = .*;/MARKETING_VERSION = "${{ github.event.inputs.version }}";/' MuscleUp.xcodeproj/project.pbxproj
