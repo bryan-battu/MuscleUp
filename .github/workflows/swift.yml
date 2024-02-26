@@ -1,4 +1,4 @@
-name: Build and Test
+name: CI/CD
 
 on:
   workflow_dispatch:
@@ -20,8 +20,6 @@ jobs:
     runs-on: macos-13
     steps:
       - uses: actions/checkout@v4
-      - name: Set Build Number
-        run: echo "BUILD_NUMBER=$GITHUB_RUN_NUMBER" >> $GITHUB_ENV
       - name: Setup Swift
         uses: swift-actions/setup-swift@65540b95f51493d65f5e59e97dcef9629ddf11bf
         with:
@@ -30,6 +28,8 @@ jobs:
         run: |
           sed -i '' 's/MARKETING_VERSION = .*;/MARKETING_VERSION = "${{ github.event.inputs.version }}";/' MuscleUp.xcodeproj/project.pbxproj
           sed -i '' 's/CURRENT_PROJECT_VERSION = .*;/CURRENT_PROJECT_VERSION = "${{ github.run_number }}";/' MuscleUp.xcodeproj/project.pbxproj
+      - name: Commit, Tag and Push
+        uses: 
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
