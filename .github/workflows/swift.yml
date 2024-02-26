@@ -29,11 +29,9 @@ jobs:
       - name: Update Version
         run: |
           sed -i '' 's/CURRENT_PROJECT_VERSION = .*;/CURRENT_PROJECT_VERSION = "${{ github.event.inputs.version }}";/' MuscleUp.xcodeproj/project.pbxproj
-          sed -i '' 's/BUILD_NUMBER = .*;/BUILD_NUMBER = "${{ github.run_number }}";/' MuscleUp.xcodeproj/project.pbxproj
           git config --global user.name 'Bryan Battu'
           git config --global user.email 'bryan-battu@users.noreply.github.com'
-          git commit -am "Update version to ${{ github.event.inputs.version }} and build to ${{ github.run_number }}"
-          git tag ${{ github.event.inputs.version }}
+          git commit -am "Automated report"
           git push
       - name: Build
         run: |
