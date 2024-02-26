@@ -29,10 +29,13 @@ jobs:
       - name: Update Version
         run: |
           sed -i '' 's/CURRENT_PROJECT_VERSION = .*;/CURRENT_PROJECT_VERSION = "${{ github.event.inputs.version }}";/' MuscleUp.xcodeproj/project.pbxproj
-          git config --global user.name 'Bryan Battu'
-          git config --global user.email 'bryan-battu@users.noreply.github.com'
-          git commit -am "Automated report"
-          git push
+          sed -i '' 's/BUILD_NUMBER = .*;/BUILD_NUMBER = "${{ github.run_number }}";/' MuscleUp.xcodeproj/project.pbxproj
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Update version to ${{ github.event.inputs.version }} and build to ${{ github.run_number }}"
+          git tag ${{ github.event.inputs.version }}
+          git push --follow-tags --set-upstream origin ${{ github.ref }}
       - name: Build
         run: |
           xcodebuild build -workspace MuscleUp.xcworkspace -scheme MuscleUp -sdk iphoneos CODE_SIGNING_ALLOWED=No
