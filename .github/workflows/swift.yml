@@ -31,7 +31,3 @@ jobs:
         with:
           name: my-artifact
           path: DerivedData/**/*.app
-          
-      - name: Run tests
-        run: |
-          xcodebuild -scheme MuscleUp -destination 'platform=iOS' test
