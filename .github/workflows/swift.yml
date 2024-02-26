@@ -29,7 +29,7 @@ jobs:
       - name: Update Version
         run: |
           sed -i '' 's/CURRENT_PROJECT_VERSION = .*;/CURRENT_PROJECT_VERSION = "${{ github.event.inputs.version }}";/' MuscleUp.xcodeproj/project.pbxproj
-          git config --local user.email "bryan.battu@gmail.com"
+          git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
           git commit -m "Update version to ${{ github.event.inputs.version }} and build to $BUILD_NUMBER"
