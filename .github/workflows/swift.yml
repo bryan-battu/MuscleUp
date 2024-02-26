@@ -34,6 +34,9 @@ jobs:
           git config --local user.name "GitHub Action"
           git add .
           git commit -m "Update version to ${{ github.event.inputs.version }} and build to ${{ github.run_number }}"
+          git push --follow-tags --set-upstream origin ${{ github.ref }}
+      - name: Create Tag
+        run: | 
           git tag ${{ github.event.inputs.version }}
           git push --follow-tags --set-upstream origin ${{ github.ref }}
       - name: Build
