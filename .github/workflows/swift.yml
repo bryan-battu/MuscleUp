@@ -10,13 +10,13 @@ on:
 
 jobs:
   SwiftLint:
-    runs-on: ubuntu-latest
+    runs-on: macos-13
     steps:
       - uses: actions/checkout@v4
       - name: GitHub Action for SwiftLint
         uses: norio-nomura/action-swiftlint@3.2.1
 
-  Build:
+  Version:
     runs-on: macos-13
     steps:
       - uses: actions/checkout@v4
@@ -24,10 +24,16 @@ jobs:
         uses: swift-actions/setup-swift@v1
         with:
           swift-version: "5.1.0"
+          
       - name: Update Version
         run: |
           sed -i '' 's/MARKETING_VERSION = .*;/MARKETING_VERSION = "${{ github.event.inputs.version }}";/' MuscleUp.xcodeproj/project.pbxproj
           sed -i '' 's/CURRENT_PROJECT_VERSION = .*;/CURRENT_PROJECT_VERSION = "${{ github.run_number }}";/' MuscleUp.xcodeproj/project.pbxproj
+          
+      - name: Build
+        run: |
+          xcodebuild build -workspace MuscleUp.xcworkspace -scheme MuscleUp -sdk iphoneos CODE_SIGNING_ALLOWED=No
+          
       - name: Commit and Push
         run: |
           git config --local user.email "action@github.com"
@@ -35,13 +41,12 @@ jobs:
           git add .
           git commit -m "Update version to ${{ github.event.inputs.version }} and build to ${{ github.run_number }}"
           git push --follow-tags --set-upstream origin ${{ github.ref }}
+          
       - name: Create Tag
         run: | 
           git tag ${{ github.event.inputs.version }}
           git push --tags
-      - name: Build
-        run: |
-          xcodebuild build -workspace MuscleUp.xcworkspace -scheme MuscleUp -sdk iphoneos CODE_SIGNING_ALLOWED=No
+      
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
