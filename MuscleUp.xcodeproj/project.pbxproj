@@ -20,6 +20,10 @@
 		984722232B54288200A6573F /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984722222B54288200A6573F /* GradientButton.swift */; };
 		984722252B542E0D00A6573F /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984722242B542E0D00A6573F /* SignUp.swift */; };
 		984722272B5431C800A6573F /* ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984722262B5431C800A6573F /* ForgotPassword.swift */; };
+		986F1EB22B8FEBFF00FEF7A8 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986F1EB12B8FEBFF00FEF7A8 /* Home.swift */; };
+		986FB5F52B8FD35500AF0082 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986FB5F42B8FD35500AF0082 /* RegisterModel.swift */; };
+		986FB5F82B8FD69300AF0082 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986FB5F72B8FD69300AF0082 /* Request.swift */; };
+		986FB5FA2B8FE51D00AF0082 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986FB5F92B8FE51D00AF0082 /* AuthViewModel.swift */; };
 		98F073EE2B5B1782006D4172 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F073ED2B5B1782006D4172 /* HeaderView.swift */; };
 		98F073F02B5B1AF6006D4172 /* PasswordResetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F073EF2B5B1AF6006D4172 /* PasswordResetView.swift */; };
 		C964C170D49096BDFC3B2C7A /* Pods_MuscleUp_MuscleUpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECFF11EBDC6C8EFB003CD35A /* Pods_MuscleUp_MuscleUpUITests.framework */; };
@@ -69,6 +73,10 @@
 		984722242B542E0D00A6573F /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		984722262B5431C800A6573F /* ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassword.swift; sourceTree = "<group>"; };
 		98652DB9A9D9C56F5BEB29DB /* Pods-MuscleUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuscleUp.release.xcconfig"; path = "Target Support Files/Pods-MuscleUp/Pods-MuscleUp.release.xcconfig"; sourceTree = "<group>"; };
+		986F1EB12B8FEBFF00FEF7A8 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		986FB5F42B8FD35500AF0082 /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		986FB5F72B8FD69300AF0082 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		986FB5F92B8FE51D00AF0082 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		98F073ED2B5B1782006D4172 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		98F073EF2B5B1AF6006D4172 /* PasswordResetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetView.swift; sourceTree = "<group>"; };
 		ECFF11EBDC6C8EFB003CD35A /* Pods_MuscleUp_MuscleUpUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MuscleUp_MuscleUpUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +148,9 @@
 		984721EE2B541C5800A6573F /* MuscleUp */ = {
 			isa = PBXGroup;
 			children = (
+				986FB5F62B8FD4E400AF0082 /* Service */,
+				986FB5F32B8FD16600AF0082 /* Model */,
+				986FB5F22B8FD15700AF0082 /* ViewModel */,
 				9847221C2B541F9500A6573F /* Helpers */,
 				984722192B541DDC00A6573F /* View */,
 				984721EF2B541C5800A6573F /* MuscleUpApp.swift */,
@@ -178,13 +189,9 @@
 		984722192B541DDC00A6573F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9847221A2B541E0E00A6573F /* Login.swift */,
-				984722202B54211000A6573F /* CustomTextField.swift */,
-				984722222B54288200A6573F /* GradientButton.swift */,
-				984722242B542E0D00A6573F /* SignUp.swift */,
-				984722262B5431C800A6573F /* ForgotPassword.swift */,
-				98F073EF2B5B1AF6006D4172 /* PasswordResetView.swift */,
-				98F073ED2B5B1782006D4172 /* HeaderView.swift */,
+				986F1EB02B8FEBDB00FEF7A8 /* Components */,
+				986F1EAF2B8FEBCA00FEF7A8 /* Auth */,
+				986F1EB12B8FEBFF00FEF7A8 /* Home.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,6 +202,51 @@
 				9847221E2B541FA900A6573F /* View+Extensions.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		986F1EAF2B8FEBCA00FEF7A8 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				984722262B5431C800A6573F /* ForgotPassword.swift */,
+				98F073EF2B5B1AF6006D4172 /* PasswordResetView.swift */,
+				984722242B542E0D00A6573F /* SignUp.swift */,
+				9847221A2B541E0E00A6573F /* Login.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		986F1EB02B8FEBDB00FEF7A8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				984722202B54211000A6573F /* CustomTextField.swift */,
+				984722222B54288200A6573F /* GradientButton.swift */,
+				98F073ED2B5B1782006D4172 /* HeaderView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		986FB5F22B8FD15700AF0082 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				986FB5F92B8FE51D00AF0082 /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		986FB5F32B8FD16600AF0082 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				986FB5F42B8FD35500AF0082 /* RegisterModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		986FB5F62B8FD4E400AF0082 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				986FB5F72B8FD69300AF0082 /* Request.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		EB3732F124628F0077DB87A9 /* Frameworks */ = {
@@ -218,6 +270,7 @@
 				984721E82B541C5800A6573F /* Sources */,
 				984721E92B541C5800A6573F /* Frameworks */,
 				984721EA2B541C5800A6573F /* Resources */,
+				AB029304854E1856233B1EB1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -255,6 +308,7 @@
 				984722022B541C5900A6573F /* Sources */,
 				984722032B541C5900A6573F /* Frameworks */,
 				984722042B541C5900A6573F /* Resources */,
+				2A23420580DC59874818455F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -273,7 +327,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
+				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					984721EB2B541C5800A6573F = {
@@ -380,6 +434,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		2A23420580DC59874818455F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuscleUp-MuscleUpUITests/Pods-MuscleUp-MuscleUpUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuscleUp-MuscleUpUITests/Pods-MuscleUp-MuscleUpUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MuscleUp-MuscleUpUITests/Pods-MuscleUp-MuscleUpUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		992E6C19F486BF67262BF696 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -402,6 +473,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AB029304854E1856233B1EB1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuscleUp/Pods-MuscleUp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MuscleUp/Pods-MuscleUp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MuscleUp/Pods-MuscleUp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -410,14 +498,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				984722252B542E0D00A6573F /* SignUp.swift in Sources */,
+				986FB5F82B8FD69300AF0082 /* Request.swift in Sources */,
 				98F073F02B5B1AF6006D4172 /* PasswordResetView.swift in Sources */,
 				98F073EE2B5B1782006D4172 /* HeaderView.swift in Sources */,
 				9847221B2B541E0E00A6573F /* Login.swift in Sources */,
 				984722232B54288200A6573F /* GradientButton.swift in Sources */,
+				986F1EB22B8FEBFF00FEF7A8 /* Home.swift in Sources */,
 				984722272B5431C800A6573F /* ForgotPassword.swift in Sources */,
+				986FB5F52B8FD35500AF0082 /* RegisterModel.swift in Sources */,
 				984721F22B541C5800A6573F /* ContentView.swift in Sources */,
 				9847221F2B541FA900A6573F /* View+Extensions.swift in Sources */,
 				984721F02B541C5800A6573F /* MuscleUpApp.swift in Sources */,
+				986FB5FA2B8FE51D00AF0082 /* AuthViewModel.swift in Sources */,
 				984722212B54211000A6573F /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -585,6 +677,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MuscleUp/Preview Content\"";
 				DEVELOPMENT_TEAM = MKU9V22KT6;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -615,6 +708,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MuscleUp/Preview Content\"";
 				DEVELOPMENT_TEAM = MKU9V22KT6;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

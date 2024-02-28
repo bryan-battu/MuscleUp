@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SignUp: View {
     @Binding var showSignUp: Bool
+    @ObservedObject var authViewModel: AuthViewModel
+    
     /// View properties
     @State private var emailID: String = ""
     @State private var firstname: String = ""
@@ -41,7 +43,23 @@ struct SignUp: View {
                 CustomTextField(sfIcon: "lock", hint: "Confirmez votre mot de passe", isPassword: true, value:  $confirmedPassword)
                 
                 GradientButton(title: "S'inscrire", icon: "arrow.right") {
+                    let params: [String : Any] = [
+                        "email": emailID,
+                        "firstname": firstname,
+                        "lastname": lastname,
+                        "password": password,
+                        "confirmPassword": confirmedPassword
+                    ]
                     
+                    authViewModel.register(params: params) { result in
+                        switch result {
+                        case .failure(let error):
+                            if let nsError = error as NSError?, let errorMessage = nsError.userInfo[NSLocalizedDescriptionKey] as? String {
+                                print(errorMessage)
+                            }
+                        default: break
+                        }
+                    }
                 }
                 .hSpacing(.trailing)
                 // Désactiver tant que les fields ne sont pas remplis
@@ -71,8 +89,6 @@ struct SignUp: View {
 }
 
 
-#if DEBUG
 #Preview {
     ContentView()
 }
-#endif
