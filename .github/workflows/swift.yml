@@ -1,35 +1,54 @@
-name: Swift
+name: Version
 
 on:
-  push:
-    branches: ["main"]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Numéro de version de l'application"
+        required: true
+        default: "1.0.0"
 
 jobs:
   SwiftLint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: GitHub Action for SwiftLint
         uses: norio-nomura/action-swiftlint@3.2.1
-        
-  Build:
-    runs-on: macos-latest
 
+  Version:
+    runs-on: macos-13
     steps:
-    - uses: actions/checkout@v3
-    - name: Install Dependencies
-      run: |
-        pod install --repo-update
-      shell: bash
-
-    - name: Clean
-      run: |
-        xcodebuild clean -workspace MuscleUp.xcworkspace -scheme MuscleUp
-
-    - name: Build
-      run: |
-        xcodebuild build -workspace MuscleUp.xcworkspace -scheme MuscleUp -sdk iphoneos CODE_SIGNING_ALLOWED=No
-
-    - name: Run tests
-      run: |
-        xcodebuild test -workspace MuscleUp.xcworkspace -scheme MuscleUp -sdk iphoneos -destination "platform=iOS Simulator,OS=17.3,name=iPhone 15 Pro Max" CODE_SIGNING_ALLOWED=No
+      - uses: actions/checkout@v4
+      - name: Setup Swift
+        uses: swift-actions/setup-swift@v1
+        with:
+          swift-version: "5.1.0"
+          
+      - name: Update Version
+        run: |
+          sed -i '' 's/MARKETING_VERSION = .*;/MARKETING_VERSION = "${{ github.event.inputs.version }}";/' MuscleUp.xcodeproj/project.pbxproj
+          sed -i '' 's/CURRENT_PROJECT_VERSION = .*;/CURRENT_PROJECT_VERSION = "${{ github.run_number }}";/' MuscleUp.xcodeproj/project.pbxproj
+          
+      - name: Build
+        run: |
+          xcodebuild build -workspace MuscleUp.xcworkspace -scheme MuscleUp -sdk iphoneos CODE_SIGNING_ALLOWED=No
+          
+      - name: Commit and Push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Update version to ${{ github.event.inputs.version }} and build to ${{ github.run_number }}"
+          git push --follow-tags --set-upstream origin ${{ github.ref }}
+          
+      - name: Create Tag
+        run: | 
+          git tag ${{ github.event.inputs.version }}
+          git push --tags
+      
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-artifact
+          path: DerivedData/**/*.app
