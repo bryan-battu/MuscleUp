@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AlertToast
 
 struct SignUp: View {
     @Binding var showSignUp: Bool
@@ -17,6 +18,9 @@ struct SignUp: View {
     @State private var lastname: String = ""
     @State private var password: String = ""
     @State private var confirmedPassword: String = ""
+    
+    @State private var showToast = false
+    @State private var errorMessage = ""
     
     var body: some View {
         VStack(alignment: .leading, spacing: 15, content: {
@@ -32,17 +36,19 @@ struct SignUp: View {
             HeaderView(title: "Inscription", subtitle: "Inscrivez-vous pour continuer")
             
             VStack(spacing: 25) {
-                CustomTextField(sfIcon: "at", hint: "Email", value:  $emailID)
+                CustomTextField(autocapitalizationType: .never, sfIcon: "at", hint: "Email", value:  $emailID)
                 
-                CustomTextField(sfIcon: "person", hint: "Prénom", value:  $firstname)
+                CustomTextField(autocapitalizationType: .sentences, sfIcon: "person", hint: "Prénom", value:  $firstname)
                 
-                CustomTextField(sfIcon: "person", hint: "Nom", value:  $lastname)
+                CustomTextField(autocapitalizationType: .sentences, sfIcon: "person", hint: "Nom", value:  $lastname)
                 
-                CustomTextField(sfIcon: "lock", hint: "Mot de passe", isPassword: true, value:  $password)
+                CustomTextField(autocapitalizationType: .never, sfIcon: "lock", hint: "Mot de passe", isPassword: true, value:  $password)
                 
-                CustomTextField(sfIcon: "lock", hint: "Confirmez votre mot de passe", isPassword: true, value:  $confirmedPassword)
+                CustomTextField(autocapitalizationType: .never, sfIcon: "lock", hint: "Confirmez votre mot de passe", isPassword: true, value:  $confirmedPassword)
                 
                 GradientButton(title: "S'inscrire", icon: "arrow.right") {
+                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                    
                     let params: [String : Any] = [
                         "email": emailID,
                         "firstname": firstname,
@@ -51,19 +57,19 @@ struct SignUp: View {
                         "confirmPassword": confirmedPassword
                     ]
                     
-                    authViewModel.register(params: params) { result in
-                        switch result {
-                        case .failure(let error):
-                            if let nsError = error as NSError?, let errorMessage = nsError.userInfo[NSLocalizedDescriptionKey] as? String {
-                                print(errorMessage)
-                            }
-                        default: break
-                        }
-                    }
+                    authViewModel.register(params: params)
                 }
                 .hSpacing(.trailing)
                 // Désactiver tant que les fields ne sont pas remplis
                 .disableWithOpacity(emailID.isEmpty || password.isEmpty || firstname.isEmpty || lastname.isEmpty || confirmedPassword.isEmpty)
+                .onReceive(NotificationCenter.default.publisher(for: Notification.Name("ShowToastNotification"))) { notification in
+                    guard let message = notification.object as? String else { return }
+                    self.showToast = true
+                    self.errorMessage = message
+                }
+                .toast(isPresenting: $showToast) {
+                    AlertToast(displayMode: .hud, type: .regular, title: errorMessage)
+                }
             }
             .padding(.top, 20)
             
@@ -77,7 +83,7 @@ struct SignUp: View {
                     showSignUp = false
                 }
                 .fontWeight(.bold)
-                .tint(.appYellow)
+                .tint(.blue)
             })
             .font(.callout)
             .hSpacing()

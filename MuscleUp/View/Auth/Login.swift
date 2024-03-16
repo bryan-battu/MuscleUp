@@ -24,16 +24,16 @@ struct Login: View {
             HeaderLogin()
             
             VStack(spacing: 25) {
-                CustomTextField(sfIcon: "at", hint: "Email", value:  $emailID)
+                CustomTextField(autocapitalizationType: .never, sfIcon: "at", hint: "Email", value:  $emailID)
                 
-                CustomTextField(sfIcon: "lock", hint: "Mot de passe", isPassword: true, value:  $password)
+                CustomTextField(autocapitalizationType: .never, sfIcon: "lock", hint: "Mot de passe", isPassword: true, value:  $password)
                 
                 Button("Mot de passe oublié ?") {
                     showForgotPasswordView.toggle()
                 }
                 .font(.callout)
                 .fontWeight(.heavy)
-                .tint(.appYellow)
+                .tint(.blue)
                 .hSpacing(.trailing)
                 
                 GradientButton(title: "Se connecter", icon: "arrow.right") {
@@ -55,7 +55,7 @@ struct Login: View {
                     showSignUp.toggle()
                 }
                 .fontWeight(.bold)
-                .tint(.appYellow)
+                .tint(.blue)
             })
             .font(.callout)
             .hSpacing()

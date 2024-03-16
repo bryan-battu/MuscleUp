@@ -28,8 +28,8 @@ struct PasswordResetView: View {
             HeaderView(title: "Réinitialiser")
             
             VStack(spacing: 25) {
-                CustomTextField(sfIcon: "lock", hint: "Mot de passe", isPassword: true, value: $password)
-                CustomTextField(sfIcon: "lock", hint: "Confirmer le mot de passe", isPassword: true, value: $confirmPassword)
+                CustomTextField(autocapitalizationType: .never, sfIcon: "lock", hint: "Mot de passe", isPassword: true, value: $password)
+                CustomTextField(autocapitalizationType: .never, sfIcon: "lock", hint: "Confirmer le mot de passe", isPassword: true, value: $confirmPassword)
                     .padding(.top, 5)
                 
                 GradientButton(title: "Confirmer", icon: "arrow.right") {

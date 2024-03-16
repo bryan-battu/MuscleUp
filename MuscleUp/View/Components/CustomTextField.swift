@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CustomTextField: View {
     
+    var autocapitalizationType: TextInputAutocapitalization
     var sfIcon: String
     var iconTint: Color = .gray
     var hint: String
@@ -44,7 +45,8 @@ struct CustomTextField: View {
                 
                 Divider()
             })
-            
+            .textInputAutocapitalization(autocapitalizationType)
+            .disableAutocorrection(true)
             .overlay(alignment: .trailing){
                 /// Password reveal button
                 if isPassword {

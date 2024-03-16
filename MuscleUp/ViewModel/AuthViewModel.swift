@@ -7,29 +7,28 @@
 
 import Foundation
 
-class AuthViewModel: ObservableObject {
-    let request = Request()
+class AuthViewModel: MuscleUpViewModel {
+    var request: Request?
+    
+    override init() {
+        super.init()
+        self.request = Request(viewModel: self)
+    }
     
     @Published var isLoggedIn = false
     
-    func register(params: [String : Any], completion: @escaping (Result<String, Error>)->Void) {
-        request.register(params: params) { (result: Result<RegisterModel, Error>) in
-            switch result {
-            case .success(let response):
-                if let token = response.token {
-                    // Enregistrement du token dans UserDefaults
-                    UserDefaults.standard.set(token, forKey: "token")
-                    // Appel de la complétion avec succès
-                    self.isLoggedIn = true
-                    completion(.success("Register success"))
-                } else {
-                    if let message = response.message {
-                        print(message)
-                        completion(.failure(NSError(domain: "AuthViewModel", code: -1, userInfo: [NSLocalizedDescriptionKey: message])))
-                    }
-                }
-            case .failure(let error):
-                completion(.failure(error))
+    func register(params: [String : Any]) {
+        guard let request = self.request else {
+            return
+        }
+        
+        request.register(params: params) { [self] (response: MuscleUpResponse<RegisterModel>) in
+            if let token = response.result?.token {
+                UserDefaults.standard.set(token, forKey: "token")
+                // Appel de la complétion avec succès
+                self.isLoggedIn = true
+            } else {
+                showErrorToast(message: "Une erreur est survenue")
             }
         }
     }

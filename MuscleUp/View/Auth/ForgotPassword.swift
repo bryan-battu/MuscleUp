@@ -28,7 +28,7 @@ struct ForgotPassword: View {
             HeaderView(title: "Mot de passe oublié", subtitle: "Indiquez votre email")
             
             VStack(spacing: 25) {
-                CustomTextField(sfIcon: "at", hint: "Email", value:  $emailID)
+                CustomTextField(autocapitalizationType: .never, sfIcon: "at", hint: "Email", value:  $emailID)
                 
                 GradientButton(title: "Envoyer le lien ", icon: "arrow.right") {
                     Task {

@@ -8,6 +8,7 @@ target 'MuscleUp' do
   # Pods for MuscleUp
   pod 'SwiftLint'
   pod 'Alamofire'
+  pod 'AlertToast'
 
   target 'MuscleUpTests' do
     inherit! :search_paths
